@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bally Sports</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .tabs {
+            display: flex;
+        }
+
+        .tab {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .active-tab {
+            background-color: red;
+        }
+
+        .active-header {
+            text-align: center;
+            font-size: 30px;
+            margin: 0;
+            padding: 10px;
+            background-color: #333; /* Match the tab background color */
+            color: #fff; /* Match the tab text color */
+            cursor: pointer;
+
+        }
+
+        .active-header {
+            display: flex;
+            flex-wrap: wrap; /* Wrap buttons to the next line if needed */
+            justify-content: space-between;
+                        text-align: center;
+
+
+        }
+
+
+        .sub-tabs {
+            display: none;
+            flex-direction: column;
+
+        }
+
+        .sub-tab {
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        .active {
+            display: block;
+            background-color: lightgray;
+        }
+
+        .chat-content {
+            padding: 20px;
+        }
+
+        /* Center-align and style the gray text */
+        .center-text {
+            text-align: center;
+            color: red;
+        }
+
+          /* Center-align and style the gray text */
+        .center-text2 {
+            text-align: center;
+            color: black;
+        }
+
+        /* Style for functional buttons */
+        .functional-buttons {
+            display: flex;
+            flex-wrap: wrap; /* Wrap buttons to the next line if needed */
+            justify-content: space-between; /* Distribute buttons evenly */
+        }
+
+        .functional-button {
+            flex: 1;
+            max-width: calc(25% - 10px); /* Adjust button width based on the number of buttons */
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            cursor: pointer;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            margin-top: 10px
+
+        }
+        
+
+        /* Style for content sections */
+        .content-section {
+            display: none;
+            
+        }
+
+        .active-content {
+            display: none;
+            background-color: lightgray;
+        }
+
+        /* Center the table by applying CSS to the wrapping div */
+        .table-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Center vertically within the viewport */
+        }
+
+        /* Style for the table */
+        table {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+        }
+    </style>
+
+</head>
+<body>
+        <a href="" class="active-header">Bally Sports</a>
+        <div class="tabs">
+        <div class="tab" id="tab1">Chat Flow</div>
+        <div class="tab" id="tab2">Spiel</div>
+        <div class="tab" id="tab3">Probing</div>
+        <div class="tab" id="tab4">Billing</div>
+        <div class="tab" id="tab5">Tech</div>
+        <div class="tab" id="tab6">BallySport</div>
+        <div class="tab" id="tab7">Notes</div>
+        </div>
+
+
+   
+
+ <!-- Content for "Chat Flow" tab goes here -->
+    <div class="chat-content" id="chat-flow-content">
+                                    <!-- Content for "Chat Flow" tab goes here -->
+
+                                    <h2>Opening and Closing Remarks</h2>
+
+                                    <h3>Opening</h3>
+                                    </p>Thank you for contacting Bally Sports. My name is ____. I'll be happy to assist you. Please give me a moment to review your question/inquiry.
+                                  <p>Thank you for contacting Bally Sports. My name is ____. How may I help you today?</p>
+                                    <p>Before we proceed, may I have the following?</p>
+                                    <ul>
+                                        <li>Home Zip Code:</li>
+                                        <li>Device:</li>
+                                        <li>Team, game, or content you want to access on Bally Sports:</li>
+                                    </ul>
+                                    <hr>
+                                      <!-- Add "Need more Info" button -->
+                                	 <button class="functional-button" id="need-more-info-button">Need more info</button>
+                                    <button class="functional-button" id="need-more-info-button">Buy Time</button>
+                                    <button class="functional-button" id="need-more-info-button">Hold Time</button>
+                                    <button class="functional-button" id="Acknowledgement">Acknowledgement</button>
+                                    <button class="functional-button" id="Idle">Idle</button>
+                                     <button class="functional-button" id="need-more-info-button">Possitive Closing</button>
+                                    <!-- Add "Reset" button -->
+                                    <button class="functional-button" id="reset-button">Reset</button>
+
+
+
+                                       <!-- Content for "Need More Info" button -->
+                                     	<div class="content-section" id="need-more-info-section">
+                                        <p class="center-text">Only if the fan did not give out his/her complete details initially.</p>
+                                        <p>May I know your complete details, such as those below?</p>
+                                        <ul>
+                                         <li>First and last name:</li>
+                                         <li>Email Address:</li>
+                                         <li>Home Zip Code:</li>
+                                         <li>Device:</li>
+                                         <li>Team, game, or content you want to access on Bally Sports:</li>
+                                        </ul>
+                                        </div>
+
+                                         <div class="content-section" id="need-more-info-section">
+                                        <h3> Buy Time </h3>
+                                        <p>I'll be right back; I just need to double-check something.</p>
+                                        <p>Just a moment. I'm checking on this for you.</p>
+                                        <p>I apologize for keeping you waiting; I'm just confirming a few things.</p>
+                                        <p>Hang on a second; let me see what I can find out.</p>
+                                        <p>I'm on it; I just need a minute to check some details.</p>
+                                        <p>Thanks for holding on; I'm just verifying some information.</p>
+                                        <p>Please give me more time to check my resources. Thank you.</p>
+                                        </div>
+
+                                         <div class="content-section" id="need-more-info-section">
+                                        <h3>Hold for More than 2 minutes</h3>
+                                        <p>Kindly give me 1-2 minutes while I check your account. Thank you.</p>
+                                        <p>Please give me a minute or two to check your account. Thank you.</p>
+                                        <p>Please give me a minute or two to process your request. Thank you.</p>
+                                        <p>Kindly give me a brief moment; I will be checking something on my end for 1-2 minutes. Thank you.</p>
+                                         </div>
+                                       
+                                        
+                                        <div class="content-section" id="Acknowledgement"> 
+                                        <h3 class="center-text2">Acknowledgement</h3>
+                                        <h4>Hold Time</h4>
+                                        <p>Thank you for patiently waiting.</p>
+                                        <p>Thanks for your patience while I look into this.</p>
+                                        <p>Thank you for waiting and sorry for the long</p>
+                                        <h4>Information Provided</h4>
+                                        <p>Thank you for that information.</p>
+                                        <p>Thank you for the information you provided.</p>
+                                        <p>Thank you for the clarification.</p>
+                                        </div>
+                                        
+
+                                        <div class="content-section" id="Idle">
+                                        <h3>Idle | 321 Siel</h3>
+                                        <p>Hello? Are you still there?</p>    
+                                        <p>I am sorry, but since I am not receiving any response, I need to disconnect this chat to attend to other customers.</p>
+                                        <p>I apologize, but I have to disconnect this chat right now. Please feel free to contact us back at help.ballysports.com should you have any more questions. Thank you for contacting Bally Sports. Enjoy your day.</p>
+                                        </div>
+
+                                        <div class="content-section" id="need-more-info-section">
+                                        <h3>Positive Closing</h3>
+                                        <p>Thank you for contacting Bally Sports. If you have any further concerns, please do not hesitate to contact us again at <a href="https://help.ballysports.com">help.ballysports.com</a>. I will be closing this chat now to attend to other customers. Have a great day!</p>
+                                        </div>
+
+
+                                        <hr>        
+                                        <div class="content-section" id="reset-button">   
+                                        </div>
+                                    </div>
+
+                        
+
+
+ <!-- SPiel Tab -->
+   <div class="chat-content" id="spiel-content">
+                                    
+                                <h3>Opening                                                                   </h3>
+                                    <p>Hi ! Thank you for contacting Bally Sports. My name is ___. Please hold while I quickly review your issue.</p>
+                                    <p>Thank you for contacting Bally Sports. My name is ___. I'll be happy to assist you. Please give me a moment to review your question/inquiry.</p>
+                                <p>Thank you for contacting Bally Sports. My name is ____. How may I help you today?</p>
+
+                                <h3>INQUIRY (Acknowledgement and Reassurance)</h3>
+                                    <p>I understand your concern. Let me go ahead and assist you.<p>
+                                    <p>I sincerely apologize for the inconvenience.</p>
+                                <h3>Empathy</h3>
+                                    <p>I apologize for any confusion about this matter.</p>
+                                    <p>I'm sorry for any inconvenience this may have caused.</p>
+                                    <p>I went over your issue, and we're sorry for your troubles.</p>
+                                    <p>I'm sorry to hear that you're having trouble accessing the content on Bally Sports.</p>
+
+                                <h3>Empathy and Reassurance</h3>
+                                    <p>Allow me to check on this for you.</p>
+                                    <p>Don't worry; I'd be more than happy to assist you with your concerns.</p>
+                                    <p>I’m sorry to hear that. No worries; I'm more than happy to assist you regarding this matter.</p>
+                                    <p>I'm sorry to hear that you can't access your account. But don`t you worry; I am happy to assist you.</p>
+                                    <p>I'm sorry to hear that you're having trouble accessing the content on Bally Sports. No worries; I'm more than happy to assist you regarding this matter.</p>
+
+                                    <hr>
+                                <h3>Hold for More than 2 minutes</h3>
+                                <p>Kindly give me 1-2 minutes while I check your account. Thank you.</p>
+                                <p>Please give me a minute or two to check your account. Thank you.</p>
+                                <p>Please give me a minute or two to process your request. Thank you.</p>
+                                <p>Kindly give me a brief moment; I will be checking something on my end for 1-2 minutes. Thank you.</p>
+
+                                <h3> Buy Time </h3>
+                                <p>I'll be right back; I just need to double-check something.</p>
+                                <p>Just a moment. I'm checking on this for you.</p>
+                                <p>I apologize for keeping you waiting; I'm just confirming a few things.</p>
+                                <p>Hang on a second; let me see what I can find out.</p>
+                                <p>I'm on it; I just need a minute to check some details.</p>
+                                <p>Thanks for holding on; I'm just verifying some information.</p>
+                                <p>Please give me more minutes while checking my resources. Thank you.</p>
+
+                                <hr>
+                                <p>Thank you for patiently waiting.</p>
+                                <p>Thanks for your patience while I look into this.</p>
+                                <p>Thank you for waiting and sorry for the long hold.</p>
+                                <hr>
+
+
+
+                                <h3>ACKNOWLEDGE INFORMATION GIVEN:</h3>
+                                    <p>Thank you for that information.</p>
+                                    <p>Thank you for the information you provided.</p>
+                                    <p>Thank you for the clarification.</p>
+
+                                <h3>Further Assistance</h3>
+                                    <p>You're Welcome!</p>
+                                    <p>It is my pleasure to assist you.</p>
+                                      <p>Is there anything else I can help you with?</p>
+
+
+
+                                <h3>IDLE</h3> 
+                                    <p>Hello? Are you still there?</p>
+                                    <p>I am sorry, but since I am not receiving any response, I need to disconnect this chat to attend to other customers.</p>
+                                    <p>I apologize, but I have to disconnect this chat right now. Please feel free to contact us back at help.ballysports.com should you have any more questions. Thank you for contacting Bally Sports. Enjoy your day.</p>
+
+
+                                <h3>END CHAT</h3>
+                                <p>Thank you for contacting Bally Sports. If you have any further concerns, please do not hesitate to contact us again at help.ballysports.com. I will be closing this chat now to attend to other customers. Have a great day!</p>
+
+                                <HR>
+    </div>
+
+
+
+<!-- PRobing Tab -->
+                               <div class="chat-content" id="probing-content">
+                                                       
+                                <h3>ACCESSING</h3>
+                                <p>What error message do you receive when you try to access your account?</p>
+                                <p>May I know what device you are using to access your account?</p>
+                                <p>In what browser are you trying to access your account?</p>
+                                <p>What browser are you using to access your account?</p>
+                                <p>In what browser are you trying to access it?</p>
+                                <p>Have you tried to log in using another device?</p>
+                                <p>When was the last time you logged in?</p>
+                                <p>Are you experiencing this issue on other devices?</p>
+                                <p>Has this happened before?</p>
+                                     
+                                
+                                <h3>PURCHASING</h3>
+                                <p>May I know the device that you are using to purchase a subscription?</p>
+                                <p>May I know what device you are using to purchase a subscription?</p>
+                                <p>Where did you purchase your subscription?</p>
+                                
+                                
+                                <h3>WATCHING</h3>
+                                <p>May I know the specific game you are trying to watch?</p>
+                            
+                                <h3>ERROR MESSAGE</h3>
+                                <p>Is there an error message?</p>
+                                <p>What can you see on your screen? What error message did you receive?</p>
+
+                                <p>Is there an error message when you try to access the game?</p>
+                                <p>Is there any error message showing when you try to access your account?</p>
+                                </div>
+
+
+
+<!-- BILLING Tab -->
+
+                  <div class="chat-content" id="billing-content">
+                    <div class="functional-buttons">
+                        <button class="functional-button" id="Cancellation">Cancellation</button>
+                        <button class="functional-button" id="InApp">InApp Cancellation</button>
+                        <button class="functional-button" id="billing-button2">Refund</button>
+                        <button class="functional-button" id="billing-button3">Account Management</button>
+                        <button class="functional-button" id="billing-button4">Purchase</butto>
+                    </div>
+
+        <!--Cancellation-->
+                     <div class="content-section" id="Cancellation">
+                            <H2 class="center-text">Cancellation</h2>
+                                <hr>
+                            <p>I apologize for the inconvenience you're experiencing. Let me check that for you.</p>
+                            <p>I'm sorry to hear that you wish to cancel your subscription.</p> 
+                            <p>I understand that you want to cancel your subscription, and we're sorry to see you go.</p> <Hr>
+
+                              <H3>Ask the Reason</h3>
+                              <p>May I know the reason why you want to cancel?</p> 
+                              <p>May I know the reason why you decided to cancel?</p> 
+                                <hr>
+                                <H2 class="center-text">Save Offer</h2>
+
+                                <H3 > Save offer cancellation Team and Pause |  Monthly&Annual</h3>
+
+
+                                <p>I understand your concerns about canceling your subscription, and I want to ensure you have the best options available. If you decide to cancel, please keep in mind that you might miss out on upcoming games, especially those featuring your preferred team. However, if you'd like, you also have the option to pause your subscription temporarily for up to 6 months. This way, you can maintain access for the future while taking a break for now. What would you like to do?</p> 
+                                    <hr> 
+                                <p class="center-text">Other Save offer</p>
+                               <p> I completely understand your decision to cancel your subscription. However, before we proceed with the cancellation, I want to let you know about an option that might allow you to continue enjoying your team's games without losing access entirely.<p/>
+
+                                <p>You can pause your current subscription for up to 6 months. During this time, you won't be billed, but you'll retain the option to resume your subscription when you're ready to watch your team again. This way, you won't miss out on any games in the future. <p/>
+
+                                <p>Would you like to consider pausing your subscription instead of canceling, or are you sure you want to proceed with the cancellation?<p/>
+
+                                     <p class="center-text">MLB Team is not available</p>
+
+                                <p>I understand your concern about your current MLB team not being available on Bally Sport+. However, I'd like to highlight that our platform offers a wide range of other sports content, including NBA, NHL, and many more, which might still interest you. These games and events could provide an enjoyable sports-watching experience while you wait for your MLB team to become available.</p>
+
+                                <p>Additionally, if you decide to pause your current subscription for up to 6 months, you won't miss out on any of these games, and you can reactivate your subscription when your preferred MLB team is added.</p>
+
+                                <p>Would you consider pausing your subscription to enjoy other available sports content and keep your options open for the future? Please let me know how you'd like to proceed.</p>
+
+
+                                <hr>
+                             <H3 > Free 30 days | Monthly Only</h3>
+                                <p>I understand that you're thinking of cancelling your Bally Sports subscription, and I'd like to offer you a solution that might help. As a valued customer, I'm authorized to offer you a complimentary 30-day subscription to our service, which will allow you to continue experiencing all the great features and benefits of Bally Sports<p/>
+                                 <p class="center-text">Denied the Pause offer the 30 days free</p>
+                                <p>I appreciate your consideration, but if you're not interested in pausing your subscription, how about I offer you a 30-day free trial instead? This way, you can continue enjoying the games for an additional month at no cost. If you decide to continue after the trial period, your regular subscription will resume as usual. <p/>
+
+                                <p>Does this option sound more appealing to you, or are you still interested in canceling your subscription?<p/>
+                                         <hr>          
+
+
+                                <table>
+                                    <tr>
+                                        <td><h3>Accepted</h3></td>
+                                        <td><h3><ul>Denaid</ul></h3></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                        <p>Thank you for choosing to pause your subscription. To proceed, could you please let me know for how many months you'd like to pause your subscription?</p>
+
+                                        <p>Additionally, for verification purposes, may I please have the last four digits of the card on file and its expiration date?</p>
+
+                                        <p>Please keep in mind that the pause option will automatically renew your subscription once the pause period ends. You'll receive an email notification before the renewal takes place, allowing you to make any changes or adjustments at that time</p>
+
+                                        <h4>Free 30days</h4><p>I'm glad to hear you've chosen the 30-day free trial option. To proceed, could you please provide me with the last four digits of the card on file and its expiration date for verification purposes? This information will help us set up the trial for you.</p>
+                                        <hr>                                    <p class="center-text">Acknowledgement|Hold Pause</p>
+                                        <p>Thank you for providing the necessary information. May I please have your permission to put this chat on hold for 1 or 2 minutes while I process the pause of your subscription? I'll make sure to get this done as quickly as possible for you.</p>
+                                    
+                                        <p class="center-text">Acknowledgement|Hold 30 days free trial</p>
+                                        <p>Thank you for providing the information. Before I proceed, may I have your permission to put the chat on hold for 1 or 2 minutes to process the 30-day free trial for you? I'll make sure to get everything set up as quickly as possible.</p>
+                                        <hr>
+                                        <p class="center-text"> Pause</p> 
+                                         <p>Thank you for your patience. I've successfully processed the pause of your subscription. Please make a note that once the pause period ends, you will receive an email notification stating that your subscription will automatically renew.</p> 
+                                          <p class="center-text"> 30 Days free</p>
+                                         <p>Thank you for your patience. I'm pleased to inform you that we have successfully processed the 30-day free trial for you. You should now have access to all the content available during this trial period.</p> 
+                                
+
+                                        </td>
+                                        <td><ul> <p>I understand your decision to cancel your subscription. To proceed with the cancellation, I'll need to verify your account. May I please have the last four digits of the card used for billing and its expiration date? This information will help me locate your account and process the cancellation for you.</p><hr>
+                                        <p>        
+                                        Thank you for providing the necessary information. To process the cancellation for you, I'll need to put this chat on hold briefly. May I have your permission to do so? I appreciate your understanding, and I'll make sure to assist you promptly once the cancellation is processed. Thank you for your cooperation.</p>
+                                        <p> Thank you for waiting. We have successfully processed the cancellation of your subscription.  </p> 
+
+                                        <hr>
+                                        <p class="center-text">Further Assistance</p> 
+                                        <p>You're Welcome!</p> 
+                                        <p>It is my pleasure assisting you.</p> 
+                                        <p>Is there anything else I can help you with?</p> 
+                                        <hr>
+
+
+                                             <p class="center-text">Closing for Cancellation
+                                        <p>Thank you for contacting Bally Sports. If you ever decide to return or have any questions in the future, please do not hesitate to contact us again at help.ballysports.com. Thank you for using our services, and we wish you the best in your future endeavors. </p> 
+
+
+
+
+    
+
+
+
+
+
+
+                                                     </ul>   
+                                                    </td>
+
+
+
+
+                                            </tr>
+                                            </table>
+                                
+                                                <hr>
+                                             <p class="center-text">Further Assistance</p>
+                                            <p>You're Welcome!</p>
+                                            <p>It is my pleasure assisting you.</p>
+                                            <p>Is there anything else I can help you with?</p>
+
+                                            <hr> <p class="center-text">Closing</p>
+                                            Thank you for contacting Bally Sports. If you have any further concerns, please do not hesitate to contact us again at help.ballysports.com. I will be closing this chat now to attend to other customers. Have a great day!
+                                        </div>
+
+
+   <!-- In App Purchase  -->
+                          <div class="content-section" id="InApp">
+                            <h2 class="center-text">In App Purcahse Cancellation</h2>
+                            <hr>
+                             <h3 class="center-text">How to cancel a subscription through IAP</h3>
+                            <p>I apologize, as I am not authorized to cancel your subscription on my end since it was purchased from [Insert IAP Gateway here].</p>
+                            <p>I apologize for any inconvenience, but since your subscription was purchased through the Bally Sports app, we don't have direct access to manage or cancel subscriptions that were made through the app (e.g., Apple App Store, Google Play Store).</p>
+
+                            <p>To cancel your subscription, you will need to follow the cancellation process through the store from which you made the purchase. Here are the general steps to cancel a subscription purchased through your device: </p>    
+
+
+                            <hr>
+                            <h3>Roku</h3>
+                            <p>How to turn off auto-renew and cancel channel subscriptions on your Roku streaming device:</p>
+                            <ol>
+                                <li>Sign in to your Roku account.</li>
+                                <li>Select "Manage your subscriptions."</li>
+                                <li>Select the channel or subscription under "Active Subscriptions."</li>
+                                <li>Select "Turn off auto-renew."</li>
+                                <li>Tap "select a cancellation reason" to complete the process, and then select "Continue to cancel."</li>
+                            </ol>
+
+                            <h3>App Store (IOS)</h3>
+                            <p>Here is how to cancel your subscription through the App Store:</p>
+                            <ol>
+                                <li>Open the Settings app.</li>
+                                <li>Tap your name.</li>
+                                <li>Tap "Subscriptions."</li>
+                                <li>Tap the subscription.</li>
+                                <li>Tap "Cancel Subscription."</li>
+                                <li>You might need to scroll down to find the "Cancel Subscription" button.</li>
+                            </ol>
+
+                            <h3>Google Play</h3>
+                            <p>Here is how to cancel your subscription through Google Play:</p>
+                            <ol>
+                                <li>Open the Google Play app.</li>
+                                <li>At the top right, tap the profile icon.</li>
+                                <li>Tap Payments and Subscriptions.</li>
+                                <li>Select the subscription or prepaid plan you want to cancel.</li>
+                                <li>Tap "Cancel subscription."</li>
+                            </ol>
+                            <hr>
+                            <h3 class="center-text">Incorrect package and zip code (Roku IAP)</h3>
+                            <p>Upon checking, you have made your subscription purchase through Roku. I apologize, as I am not authorized to cancel your subscription on my end.</p>
+                                <I><p style="color: gray">Advise what to do.</p></I>
+                            <p>What you can do is cancel your current subscription. After that, you can either contact Roku support so they can terminate your subscription right away, or you can wait for your current free trial to end at [Insert end of free trial date here].</p>
+                            <p>If the fan is not on a free trial</p>
+                            <p>What you can do is cancel your current subscription. After that, you can either contact Roku support so they can terminate your subscription right away, and they can also process a refund for you.</p>
+
+                            <h3>How to cancel</h3>
+                            <p>Here are the steps on how to turn off auto-renew and cancel channel subscriptions on your Roku streaming device:</p>
+                            <ol>
+                                <li>Press Home on your Roku remote.</li>
+                                <li>Highlight the channel you want to cancel.</li>
+                                <li>Press Star on your remote to open the options menu.</li>
+                                <li>Select Manage subscription.</li>
+                                <li>To unsubscribe, select Cancel subscription.</li>
+                                <li>To confirm, select Cancel subscription.</li>
+                            </ol>
+                            <p>For your refund request, kindly contact Roku directly through this link <a href="https://support.roku.com/contactus" target="_blank">https://support.roku.com/contactus</a>.</p>
+
+                            <h3>Guide the fan on how to re-subscribe with the correct package and zip code</h3>
+                            <p>After your current subscription has been terminated or expired, you can re-subscribe by visiting ballysports.com/packages and enter your current zip code. Please make sure that you have a credit card with the same billing zip code as well prior to re-subscribing.</p>
+                            <hr>
+
+
+
+                           </div>
+   <!-- refund  -->
+                 <div class="content-section" id="button3-section">
+                            <h2 class="center-text">Refund</h2>
+                            <hr>
+                            <P>I'm sorry for any inconvenience this may have caused.</P>
+                            <p>I understand that you decided to cancel your subscription and get a refund.</p>
+                            <p>Let me check this out for you</p>
+
+                            <P>I`m sorry to hear that you haven't been able to access your team. I understand you wanted to cancel your subscription and get a refund.  Let me go ahead and check that for you.</P>
+                            <P>I apologize for the inconvenience you`ve experienced in not being able to access your preferred team. I understand that you want to cancel and get a refund.</P>
+
+
+                            <p class="center-text">No Refund Policy</p>
+                            <P>I completely understand your disappointment and frustration. When expectations are not met, it can be discouraging, and I apologize for any inconvenience this has caused. While I cannot guarantee a refund, I can assure you that our no-refund policy is in place to ensure that our services are fair and consistent for all subscribers. I hope you continue to enjoy and find value in the other features of your subscription.</P>
+
+                             <P>As per our Subscriber Agreement (https://www.ballysports.com/subscriber-agreement)
+                            “No Refunds – All Purchases Final
+                            All purchases are final, and you are not entitled to a refund of any purchase. If you cancel your monthly or annual subscription, you will continue to have access to the service through the end of your then-current billing period (either that month, for monthly subscribers, or that billing year, for annual subscribers)</P>
+
+                            <p class="center-text">Other No Refund Policy</p>
+
+                            We understand that you would like a refund; however, please note that all purchases made with us are final, and we do not offer guarantees for refunds according to our subscriber's agreement. To gain deeper insights, you may click this link: https://www.ballysports.com/subscriber-agreement.
+                            <hr>
+                            <h3 class="center-text">Refund (If fan insists)</h3>
+
+                            <p>I totally understand you. Please give me a minute or two, I will reach out to our billing team, and I will try my best to ask for approval of your refund request.</p>
+                            <hr>
+                            <h4>CC Verification</h4>
+                            <p>While I am asking for possible approval, may I know the last four (4) digits of your credit card number, including the expiration date, please?</p>
+                            
+                            <p>May I please have the last four digits of your credit card and it’s expiration date?</p>
+                            <hr>
+
+                            <p>Good news! Since we value you so much, I would love to say that the refund request for your subscription has been approved by our billing team. For this, I would love to ask for a minute or two to process the refund for your purchased subscription.</p> 
+                             
+                            <p>I have already processed the refund of your purchased subscription. Please be informed that the refunded money will reflect in your bank account in 3–7 working days.</p>  
+                             
+                            <p>Also, if you change your mind and want to watch and support the game of your favorite team, you can always re-subscribe and enjoy watching with us.</p> 
+                             
+                            <p>Your subscription has already been canceled, so you won't be charged in the next billing cycle. However, you can still enjoy your access with your subscription until [insert validity till date]</p>
+                            <hr>  
+                            <p class="center-text">Further Assistance</p>
+                            <p>You're Welcome!</p>
+                            <p>It is my pleasure assisting you.</p>
+                            <p>Is there anything else I can help you with?</p>
+
+                            <hr>    
+                            <h4>Canceled Closing</h4>
+                            <p>Thank you for contacting Bally Sports. If you ever decide to return or have any questions in the future, please do not hesitate to contact us again at help.ballysports.com. Thank you for using our services, and we wish you the best in your future endeavors.</p>
+                            <hr>
+                            <hr>
+
+                </div>
+
+
+ <!-- Update Payment  -->
+                            <div class="content-section" id="button2-section">
+                            <h2 class="center-text">Account Management</h2>
+                            <hr>
+                            <h3 style="color: ">Pause Guide</h3>
+                            <ol>
+                            <l>To temporarily pause your Bally Sports+ subscription, please  follow these steps:</l>
+                            <ol type="a">
+                            <li>Visit <a href="https://www.ballysports.com/my-account" target="_blank">https://www.ballysports.com/my-account</a></li>
+                            <li>Click on the "Subscriptions" tab.</li>
+                            <li>Locate the "Active Subscriptions" section and find the "Pause Your Subscription" option.</li>
+                            <li>Next to "Pause Your Subscription," click on the "Pause" button.</li>
+                            <li>A menu will appear, allowing you to select the duration of the pause. You can choose from 1, 2, 3, 4, 5, or 6 months.</li>
+                            <li>Once you have decided on the desired pause duration, click the "Pause" button to confirm your selection.</li></ol></ol>
+
+                            <l>By following these steps, you will successfully pause your Bally Sports+ subscription for the chosen duration.
+                            </l>
+                            <p>_____________</p>
+                            <p style="color: gray">Note:</p>
+                            <p>During the pause period, the subscription is inactive, and no charges are incurred. However, once the pause period expires, the subscription automatically resumes, ensuring uninterrupted service.</p>
+                            <P>Upon resumption, the billing date is adjusted based on the number of days remaining from the previous subscription period. This means that the paused period's remaining days will be added to the new subscription, allowing users to fully utilize the subscription period they paid for.
+                            </P>
+                            <hr>
+                            <h3>Update CC Details: Web</h3>
+                            <p>To update your credit card details on your Bally Sports account, please follow these steps:</p>
+                            <ol>
+                            <li>Log in to your Bally Sports account using your email address and password.</li>
+                            <li>Once logged in, click on the "My Account" button in the screen's top-right corner.</li>
+                            <li>Under "My Account," select the "Subscriptions" tab.</li>
+                            <li>On the "Billing Details," you will see your current credit card information. To update your credit card details, click on the "Edit" button.</li>
+                            <li>Enter your new credit card information, including the card number, expiration date, and security code.</li>
+                            <li>Click on the "Save" button to update your credit card details.</li>
+                            </ol>
+                            <p>A confirmation message will appear to confirm that your credit card information has been updated successfully. Please note that changes to your credit card information may take up to 24 hours to take effect on your account.</p>
+                            <hr>
+                            <h3>Pin and Pair (MVPD)</h3>
+                            <ol>
+                            <li>Open the Bally Sports app on your TV.</li>
+                            <li>Select "Connect TV Provider". A code along with a URL will appear on your screen. Stay on this screen, then open the URL in a web browser on your phone or computer. (<a href="http://ballysports.com/mvpd/pinpair" target="_blank">ballysports.com/mvpd/pinpair</a>)</li>
+                            <li>Enter the code on your TV screen, then select your TV provider.</li>
+                            <li>Complete the sign-up or sign-in process.</li>
+                            <li>You should now have access to Bally Sports content through your TV provider.</li>
+                            </ol>
+                            <h3>Pin and Pair (DTC)</h3>
+                            <p>Kindly follow these steps in order to log in:</p>
+                            <ol>
+                            <li>Launch the Bally Sports app and directly go to "Settings."</li>
+                            <li>Select "Sign in."</li>
+                            <li>Using a web browser, go to <a href="http://ballysports.com/my-account/pinpair/" target="_blank">http://ballysports.com/my-account/pinpair/</a>.</li>
+                            <li>Login with your Bally Sports email address and password.</li>
+                            <li>Enter the code on your TV.</li>
+                            <li>Confirm logging in on the website.</li>
+                             </ol>
+                             <hr>
+                             <h3>How to Change Your Bally Sports Account Email</h3>
+                            <p>If you have purchased a Bally Sports+ Subscription and cannot access your email, please email Customer Support at <a href="mailto:help@support.ballysports.com">help@support.ballysports.com</a>.</p>
+                            <hr>
+                            </div>
+
+
+                                <div class="content-section" id="button4-section">
+                                <h2 class="center-text">Purchase</h2>
+                                <hr>
+                                <h4>No active subscription</h4>
+                                <p>According to our records, you do not have an active subscription with Bally Sports. Your most recent subscription was purchased on [Insert date here].</p>
+                                <p>The auto-renewal did not go through because the payment method used was declined. Thus, you were not charged with it.</p>
+                                <p>No worries; I can guide you on how to purchase a subscription package for you to be able to watch premium content with Bally Sports. Should we proceed?</p>
+                                <p>I will now provide the steps on how you can purchase a new subscription package.</p>
+                                <h4>Website</h4>
+                                <ol>
+                                <li>On your web browser, please launch this URL: <a href="www.ballysports.com/packages" target="_blank">www.ballysports.com/packages</a>.</li>
+                                <li>Enter the zip code of your home area.</li>
+                                <li>Click the "See Packages" button.</li>
+                                <li>Select the package that you want to purchase.</li>
+                                <li>Complete the details being asked, including the payment method.</li>
+                                </ol>
+                                <h4>Bally Sports App</h4>
+                                <ol>
+                                <li>Launch the Bally Sports app.</li>
+                                <li>Click the "More" button on the lower right section of the homepage.</li>
+                                <li>Click "Subscription".</li>
+                                <li>Click "Browse All Packages".</li>
+                                <li>Select the package that you want to purchase and complete all the details being asked, including the payment method.</li>
+                                </ol>
+                                <h4>Payment Options</h4>
+                                <p>On the Web, we accept credit cards (Mastercard, Visa, American Express, and Paypal).</p>
+                                <p>On mobile, all payment methods are supported by the Apple Store and Google Play Store.</p>
+                                <p>On TVs, all payment methods are supported by the Apple Store, Google Play Store, Roku Pay, and Amazon.</p>
+                            
+                                 </div>
+</div>
+
+
+
+
+
+ <!-- Existing content for "Tech" tab -->
+<div class="chat-content" id="tech-content">
+                                                         
+                                  
+                        <div class="functional-buttons">
+                        <button class="functional-button" id="Unable">Streaming Issue</button>
+                         <button class="functional-button" id="Audio">Audio Issue</button>
+                        <button class="functional-button" id="tech-button2">Other Tech Issue</button>
+                        <button class="functional-button" id="tech-button4">TS Flow</button>
+                        <button class="functional-button" id="tech-button4">TroubleShooting</button>
+                        </div>
+
+
+              
+                     
+                    
+
+
+
+<!-- Existing content sections for tech -->
+<!-- Unbale to watch -->
+         <div class="content-section" id="Unbale">
+                            
+                                                <h2 class="center-text">Streaming Issue</h2>
+                                                <hr>
+                          <h3>Openning Spiel | Possotive Scripting</h3>                     
+
+                    
+                    <p>Thank you for contacting Bally Sports. My name is ___. I'll be happy to assist you. Please give me a moment to review your question/inquiry.
+                    </p>
+ 
+                       <p>I`ve gone through your previous messages and observed that you`ve been encountering difficulties with watching the game. This is not the kind of experience we want to give our customers. Rest assured that I am committed to doing everything I can to help you.</p>
+                                           
+
+                       <p>I'll be more than happy to assit you and I'll do my best to help you resolve the issue.</p>
+                        <hr>
+                        <h4>Other openning Spiel </h4>    
+                        <table>
+                        <tr>
+                        <td>
+                        <p>I apologize for the inconvenience you're experiencing in not being able to watch the game.</p> 
+
+                        <p>I'm sorry to hear you're experiencing issues watching your local team. Let's try to troubleshoot this together.</p> 
+
+                        <p>I apologize for the inconvenience you're having trouble watching games of your team on Bally Sports.</p> 
+
+                        </td>
+
+                        <td>
+                        <p>I'm sorry to hear that you're unable to stream the game.</p>  
+
+                        <p>I`m sorry to hear that you're having a streaming issue with Bally Sports.</p> 
+
+                        <p>I'm sorry to hear that you're having trouble watching the game of your team on Bally Sports.</p> 
+
+                        </td>
+                        </tr>
+                        </table>
+                        <hr>
+                         <h3>How to Activate Your Device</h3>
+                         <p>If you are trying to activate your Roku, Amazon Fire TV, Fire TV Stick, Samsung TV, Apple TV, Xbox One, or another smart TV, please follow the steps below based on your subscription status:</p>
+
+                         <h4>If you have a TV provider, please follow the directions below:</h4>
+                         <ol>
+                        <li>Open the Bally Sports app on your device.</li>
+                        <li>Highlight and select "Connect TV Provider."</li>
+                        <li>On a computer or mobile web browser, go to <a href="https://www.ballysports.com/activate" target="_blank">https://www.ballysports.com/activate</a>.</li>
+                        <li>Enter the code displayed on your device.</li>
+                        <li>Select your TV provider.</li>
+                         </ol>
+
+                         <h4>If you have a Bally Sports+ account, please follow the directions below:</h4>
+                             <ol>
+                        <li>Open the Bally Sports app on your device.</li>
+                        <li>Highlight and select "Sign In."</li>
+                        <li>Enter your email and password if prompted.</li>
+                        <li>On a computer or mobile web browser, go to <a href="https://www.ballysports.com/account" target="_blank">https://www.ballysports.com/account</a>.</li>
+                        <li>Enter the code displayed on your device and select "Activate."</li>
+                         </ol>
+                         <hr>
+
+         </div>
+
+
+<!-- Audio issue-->
+        <div class="content-section" id="Audio">
+                            <h2 class="center-text">Audio Issue</h2>
+
+
+                            <hr>
+                            <h3>Inconsistent Audio | Provider</h3>
+                            <P>I'm sorry to hear that you're experiencing inconsistent audio levels while watching TV. This may be due to the way the broadcast is being captured or transmitted. However, there are a few things you can try to improve your viewing experience. First, you can adjust the audio settings on your TV to see if that helps balance out the volume levels. Additionally, you may want to check if there are any firmware or software updates available for your TV or cable/satellite box that could address this issue. If the problem persists, you may want to contact your service provider to see if they can provide any further assistance.
+                            </P>
+                            <hr>
+                            <h3>Audio | Apple TV</h3>
+                            <p>We apologize for the inconvenience this has caused you. We understand that you are having audio issues with the Bally Sports app on Apple TV. Did you try accessing it via a different device? Can you also try to stream using a web browser? Thank you.</p>
+                            <h3>Known Audio issue| Word Around</h3>
+                            <P>This is a known issue, and we are working hard to resolve it.  There is a workaround.  If you have AirPods or headphones, plug them in and then start playing the content.  Once it starts, remove the headset, and it should be working.</P>
+
+
+
+        </DIv>
+
+<!-- Other Tech issue-->
+     <div class="content-section" id="button2-section">
+                        <h2 class="center-text">Other Tech Issue</h2>
+                        <hr>
+                        
+                                <h3 class="center-text">National broadcast | AppleTV ESPN FOX</h3>
+                                <p>Thank you for reaching out. Unfortunately, the game is not available on Bally Sports. Instead, the game is being broadcast on <b>[AppleTV/ESPN/FOX]</b>.</p>
+                                <p>We appreciate you reaching out to us. The <b>[team name]</b> game is being broadcast on <b>[AppleTV/ESPN/FOX]</b> and is not available on Bally Sports.</p>
+                               <p style="color:red">_______________</p>
+                                <h3>Blackout Spiel</h3>
+                                <p>Please note that the content available on our service, including the Bally Sports regional sports networks, may vary depending on your location. While we cannot guarantee access to all games on your Bally Sports+ subscription, some games may be subject to blackout restrictions and be available on other platforms according to your subscription agreement. However, we can assure you that most of your home team's games will still be available on Bally Sports+.</p>
+
+
+                        <hr>
+                         <h3 class="center-text">MLB Team not in Bally Sport+</h3>
+                    
+                                <table>  
+                                  <tr>
+                                 
+                                    <td><B>Not Available for DTC</B></td>
+                                    <td>St. Louis Cardinals</td>
+                                    <td></td> <td></td>
+                                    <td><B>Available to Stream</B></td>
+                                    <td></td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>Texas Rangers</td>
+                                    <td>Minnesota Twins</td>
+                                    <td>Cincinnati Reds</td>
+                                  <td></td>
+                                  <td>Miami Marlins</td>
+                                   <td></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Boston Red Sox</td>
+                                    <td>Cleveland Guardians</td>
+                                    <td>Atlanta Braves</td>
+                                    <td></td>
+                                    <td>Tampa Bay Rays</td>
+                                     <td>Milwaukee Brewers</td>
+                                  </tr>
+                                   <tr><td>San Diego Padres</td>
+                                    <td>Arizona Diamondbacks</td>
+                                     <td>Los Angeles Angels</td>
+                                     <td></td>
+                                     <td>Kansas City Royals</td>
+                                      <td>Detroit Tigers</td>
+                                 </tr>
+                                    
+                                </table>
+                                    <p>_______________________________</p>
+
+                                    <h3>MLB Team not available for DTC</h3>
+                                    <P>I sincerely apologize, as the <b>[[TEAM]]</b> are not yet available to watch through Bally Sports+, but you can only watch them if you have a Bally Sports subscription with your local cable provider. You can check the local cable providers and packages by visiting https://getmyhometeams.com/.</P>
+
+                                    <h4>In Communication</h4>
+                                    <p>We are in communication with our MLB team partners and hope to have the <B>[Team Name]</B> on Bally Sports+ in the future.</p>
+                                    
+                                    <p>_______________________________</p>
+                                    <h4>MLB team is not available on DTC, but the fan was able to watch before:</h4>
+                                    <p>The <B>[Team Name]</B> games you recently watched through your Bally Sports+ subscription were most likely a technical error or a free preview. The list of teams covered by your package was clearly stated prior to signing up. Please accept my apologies for any confusion as well as the inconvenience it has caused you.</p>
+                                    <hr>
+
+                                    <h3 class="center-text">Team on secondary MVPD channel</h3>
+                                    <p>Due to overlapping events, the <b>[team name]</b> game is being broadcast on <b>[channel]</b></p>
+                                    <p>We apologize for any confusion. The <b>[team name]</b> game is being broadcast on <b>[channel]</b> due to overlapping events.</p>
+                                    <p>As a valued fan, we understand how important it is to watch your favorite teams. Due to overlapping events, the <b>[team name]</b> game is being broadcast on <b>[channel]</b>.</p>
+                                    <p>Today’s game is being broadcast separately on channel due to overlapping events.</p>
+                                    <hr>
+
+                                    <h3 class="center-text">MVPD outage/issue</h3>
+                                    <p>We are sorry you are experiencing issues viewing tonight’s game. Our partner, [Provider], is currently experiencing technical difficulties. Please reach out to them directly.</p>
+                                    <p>Thank you for bringing this to our attention. Our partner, [Provider], is currently experiencing technical difficulties. We will be sure to let you know when the issue is resolved.</p>
+                                    <p>Due to <b>[Provider]</b> experiencing technical issues, this has caused an interruption in service. We hope to have this issue resolved shortly.</p>
+                                    <p>This is a known issue, and we are working diligently to resolve this issue quickly with <b>[Provider]</b>.</p>
+                                    <hr>
+
+                                    <h3 class="center-text">Broadcasting/production issue</h3>
+                                    <p>Tonight’s <b>[team name]</b> game on Bally Sports <b>[region]</b> is experiencing technical difficulties. We apologize for this inconvenience and are working quickly on a resolution.</p>
+                                    <p>We are sorry to announce that the <b>[team name]</b> game on Bally Sports <b>[region]</b> is experiencing technical difficulties. We will be sure to let you know when the issue is resolved.</p>
+                                    <p>We apologize for the issue you are experiencing. We are working diligently to resolve the issue that is affecting the <b>[team name]</b> game on Bally Sports <b>[region]</b>.</p>
+                                    <hr>
+
+                                    <h3 class="center-text">BS+ outage/issue</h3>
+                                    <p>We apologize if you are experiencing issues streaming tonight’s game. We are currently experiencing technical difficulties and are working quickly on a resolution.</p>
+                                    <p>We appreciate you bringing this to our attention. We are currently experiencing technical difficulties and will be sure to let you know when this issue is resolved.</p>
+                                    <p>We are sorry about the issue you are experiencing. We are currently experiencing technical difficulties. We will be sure to let you know as soon as the issue is resolved.</p>
+
+                </div>
+
+
+
+
+
+
+
+<!-- TS Flow -->        
+         <div class="content-section" id="button4-section">
+                                        <h2 class="center-text">Troubleshooting Flow</h2>
+ <hr>
+                     <p>To help resolve this, let's go through some troubleshooting steps:</p>
+                    
+                           <B> 1. Error Message</B>    
+                                <UL><p>Is there an error message when you try to watch the game?</p>
+                                <p>Is there any error message showing when you try to access the game?</p></UL>
+                            <hr>
+                            <P><B>2. Check Subscription </B><I style="color:gray">: Verify the Bally Sports subscription is active and up-to-date. Ensure using the correct login credentials associated with a subscription.</I> </P>
+                            <UL><P>Upon checking on your account, you have an active Bally Sports+ subscription, and there's no sign of anything that may prohibit you from accessing your subscription to watch games. Kindly try to log out and log in to your Bally Sports account.</P>
+                                <p class="center-text">_________________or__________________</p>
+                            <p>As per checking, you have an active Bally Sports subscription. Since your subscription is active, there should be no restrictions preventing you from accessing it. </p>
+                            <P>To address the issue you're experiencing, I recommend that you please sign out of your Bally Sports account on the device that you are using.
+                            After signing out, close the app or website completely.
+                            Then, reopen the app or website and sign back in with your Bally Sports account credentials.
+                            </P>
+                            <p class="center-text">- Auto-renewal/Card Declined -</p>
+                            <p>Upon checking your account, you do not have an active subscription. The auto-renewal didn't take place because your card was declined. You may have to check with your bank first or use another valid credit card with the same billing zip code.</p>
+                            </UL>
+                          
+                            <hr>
+                            <P><B>3. Game trying to watch</B>:<i style="color:gray"> specify the exact game or event having trouble with. Verify the date, time, and team playing.</i></P> 
+                            <ul>Please provide the name of the game or event you're trying to access, and we'll do our best to assist you.</ul>
+                            <ul>Please specify the exact game or event you're having trouble with.
+                            Knowing the specific game can help us better understand any blackout restrictions or issues related to that particular broadcast. 
+                            </ul>
+                              <hr>
+
+                            <P><B>4. Blackout Restrictions</B>:<i style="color:gray">Check if the game is subject to blackout restrictions in the area. Some games may be restricted from streaming due to broadcasting rights.</i>
+                            <ul>Thank you for specifying the game you're trying to watch. It appears that the game you mentioned is currently being broadcast nationally, and as a result, it will not be available for live streaming on Bally Sports.</ul>
+
+                              <ul>Please note that the content available on our service, including the Bally Sports regional sports networks, may vary depending on your location. While we cannot guarantee access to all games on your Bally Sports+ subscription, some games may be subject to blackout restrictions and be available on other platforms according to your subscription agreement. However, we can assure you that most of your home team's games will still be available on Bally Sports+.</ul>
+                               <p class="center-text">___________________________________</p>
+                               <UL><h4>Current live game on | ESPN </h4></UL>
+                               <ul>I want to inform you that the game you're looking for is live on ESPN. You can watch it on ESPN's platform or check with your cable or streaming TV provider for access to the ESPN broadcast.</ul>
+                               <hr>
+                             <P><B>5. Check Your Location</B>:<i style="color:gray"> Make sure that is within the broadcast region for the local team. Sometimes, streaming services have location restrictions. 
+                                check zip code in: https://getmyhometeams.com/ or https://utils.ballysports.com/v2/getzip</i>
+                                <ul>Can I ask for your zip code? Thank you.</ul>
+                                <ul>If you've recently moved or are traveling, make sure that your streaming service has your current location. Some services determine access based on your IP address.</ul>
+                                <ul>Make sure that your device's location services are enabled, especially if you're using a mobile device. Accurate location information is crucial for determining blackout restrictions.</ul>
+                                <hr>
+                             <P><B>6. Device and App</B>:<i style="color:gray"> Ensure that the device used to stream the game is supported by Bally Sports and has the latest app or software updates installed.</i>
+                                <ul>May I know what device you are using to watch the game?</ul>
+                                <ul>May I know what device you are using that you are having trouble with?</ul>
+                                <ul>In what browser are you trying to access it?</ul>
+                                <ul>To assist you further, could you please specify the device you are using to access Bally Sports?</ul>
+                                <ul>Ensure that you are using a compatible device and have the latest version of the streaming app installed. Have you tried to check if the Bally Sports app on your device is updated? </ul>
+                                <p class="center-text">___________________________________</p>
+                                <ul>To ensure that you have the best streaming experience with Bally Sports, it's important to use a supported device. Here's a link to the list of supported devices: https://help.ballysports.com/Answer/Detail/000001374</ul>
+                                <ul>Please check the link to verify that your device is on the list. If your device is supported but you're still encountering issues, we can proceed with troubleshooting. If your device is not on the list, it may be helpful to consider using a supported device for the best viewing experience.</ul>
+                                <hr>
+                             <P><B>7. Step Taken So Far</B>:<i style="color:gray">You can ask the customer what troubleshooting they have done so far.</i>
+                                <ul>Have you tried any troubleshooting steps on your own so far?</ul>
+                                <ul>Could you please let us know what steps you have already taken to address the issue?</ul>
+                                <ul>What troubleshooting have you done so far?</ul>
+                                <hr>
+                             <P><B>8. Internet Connection</B>:<i style="color:gray"> Make sure they have a stable and high-speed internet connection. Slow or unstable internet can cause streaming problems.</i>
+                                <ul>A stable internet connection is crucial for streaming. Ensure you have a reliable internet connection, and if possible, try a speed test to check your connection quality.</ul>
+                                <ul>To further diagnose the issue, could you please check your internet speed and let us know the results? You can use a speed test tool like Ookla's Speedtest (https://www.speedtest.net/) to check your internet connection's speed.</ul>
+                              <hr>
+
+                             <P><B>9. Try other device</B>:<i style="color:gray"></i>
+                                <ul>If possible, try streaming the game on a different device to see if the issue persists. This can help determine if the problem is device-specific.</ul> 
+                                <hr>
+                 </div>
+<!-- TS -->        
+         <div class="content-section" id="button4-section">
+                    <h2 class="center-text">Troubleshooting</h2>
+                        <hr>
+                <h2>Possible Troubleshooting</h2>
+                <h3>Error Messages:</h3>
+			    <p>Ask if there are any error messages displayed when accessing the game, as these messages can offer valuable insights into the issue.</p>
+
+			    <h3>Verify Subscription:</h3>
+			    <p>Confirm that your Bally Sports subscription is both active and paid for, as subscription-related issues can affect access to content.</p>
+
+			    <h3>Zipcode/Location:</h3>
+			    <p>Kindly provide your zipcode or location, which can help us determine if blackout restrictions apply in your area.</p>
+
+			    <h3>Team You're Trying to Watch:</h3>
+			    <p>Inform us which team's game you're trying to watch, as this detail can be relevant for troubleshooting.</p>
+
+			    <h3>Blackout Restriction:</h3>
+			    <p>Verify if the game you want to watch is subject to blackout restrictions.</p>
+
+			    <h3>Device:</h3>
+			    <p>Share details about the device you're using, including its version, as these factors can influence website compatibility.</p>
+
+			    <h3>Browser:</h3>
+			    <p>Could you please specify the web browser you are using to access the Bally Sports website?</p>
+
+			    <h3>Sign Out/Sign In:</h3>
+			    <p>Attempt signing out of your Bally Sports account, closing the browser|app, and then signing back in to resolve authentication issues.</p>
+
+			    <h3>Uninstall/Reinstall:</h3>
+			    <p>Uninstalling and reinstalling it from the official app store after restarting your device.</p>
+
+			    <h3>Clear Cache:</h3>
+			    <p>Ensure you've cleared your browser's cache, as outdated data in the cache can lead to problems.</p>
+
+			    <h3>Clear Browser Cache and Cookies:</h3>
+			    <p>Clear both your browser's cache and cookies, which can help resolve issues linked to stored data.</p>
+
+			    <h3>Disable Browser Extensions:</h3>
+			    <p>Temporarily disable browser extensions, as they may interfere with website functionality.</p>
+
+			    <h3>Force Close:</h3>
+			    <p>If using a mobile app, try force-closing the app and then reopening it to resolve potential app-related issues.</p>
+
+			    <h3>Check for App and Device Updates:</h3>
+			    <p>Make sure you've installed the latest app updates and that your device's operating system is up to date.</p>
+
+			    <h3>Check for Browser Updates:</h3>
+			    <p>Confirm that your web browser is up to date, as outdated browsers may have compatibility issues.</p>
+
+			    <h3>Try a Different Browser:</h3>
+			    <p>If the issue persists, attempt to access Bally Sports using a different web browser to rule out browser-specific problems.</p>
+
+			    <h3>Trying Other Devices:</h3>
+			    <p>If possible, try accessing the Bally Sports website from an alternate device to check if the issue is device-specific.</p>
+
+			    <h3>Check Internet Speed:</h3>
+			    <p>Run an internet speed test to ensure your connection meets the streaming requirements, as slow or unstable internet can cause buffering.</p>
+			    <hr>
+			    <h3>Check for Outages:</h3>
+			    <p style="color: gray">Verify if there are any reported outages or service.</p>
+			    <hr>
+
+
+
+
+
+
+
+
+                 </div>
+
+
+
+
+
+
+
+
+
+
+                
+
+</div>
+
+         
+<!-- Content for "BallySport" tab goes here -->
+    <div class="chat-content" id="ballysport-content">
+
+                                    <h2>BallySport</h2>
+
+                           
+                <div class="functional-button1">
+                <button class="functional-button" id="BS">Bally Sports</button>
+                <button class="functional-button" id="BS+">Bally Sports+</button>   
+                </div>
+
+
+                <div class="content-section" id="BS">
+                             <h2>Bally Sports</h2>
+                            <hr>
+                            <h3>Bally Sports Hotline</h3>
+                            <p>You can contact Bally Sports Customer Service at 1-866-Bally01 (1-866-225-5901). Our live support is available from 11 a.m. to 1 a.m. EST, seven days a week. Please feel free to contact us during these hours if you have any questions or concerns, and our team will be happy to assist you. But if you still want to be assisted through the chat service, I’d be more than happy to do so.</p>
+                            <hr>
+                            <h3>Couch Rights</h3>
+                            <p>Couch Rights is a Bally Sports+ subscription feature that allows you to watch premium content on your devices outside of your home billing zip code for up to 30 days. It will be activated automatically once you begin watching premium content from a location that is more than 50 miles away from the center of your home location or the zip code registered on the account. And if you lose access to premium content because your couch rights expire after 30 days, you must log in to the Bally Sports app with location services enabled within a 50-mile radius of the center of your account's registered home zip code to restore services.</p>
+                            
+                            <h3>Couch Rights 2</h3>
+                            <p>Bally Sports has a feature called "Couch Rights" that allows you to continue watching on your application for 30 days even if you travel more than 50 miles from your home zip code. Your device will then be locked out, and you will need to go back to your home zip code.</p>
+                            
+                            <h3>Couch Rights Pushback</h3>
+                            <p>I understand that you may be asking why there is a limitation on how many days you can use our service when you are outside of your zip code. Let me explain more. Our service, which we term "Couch Rights,", is designed to give premium content to consumers while they are more than 50 miles away from the center of their home location. This implies that you can still access our premium content even if you are traveling or temporarily residing somewhere else.</p>
+                            <hr>
+                            <h3>Platforms</h3>
+                            <p>Currently, you have the option to watch Bally Sports+ content on Roku, Amazon Fire TV, Apple TV, mobile and tablet devices (iOS and Android), and BallySports.com. We are working to add additional platforms, and we encourage you to check back frequently for updated information.</p>
+                            <hr>
+                            <h3>Replay</h3>
+                            <p>Following the conclusion of the game, you have up to 72 hours to watch the replay.</p>
+                            <hr>
+                            <h3>Recording</h3>
+                            <p>Because of copyright laws, the Bally Sports app and website don't have a way to record the games right now. Currently, we only show replays, which can only be seen on the website within 72 hours of the original broadcast date.</p>
+                            <hr>
+                            <h3>Bankruptcy Issue</h3>
+                            <p>As the support group, we do not have any information regarding corporate or board actions. We will be pleased to help if you are having a technical problem with Bally Sports.</p>
+    
+                            </div>
+
+                            <div class="content-section" id="BS+">
+                            <h2>Bally Sports+</h2>
+                            <hr>
+                            <h3>What is Bally Sports+?
+                            </h3>
+                            <P>Bally Sports+ is the new streaming service from Bally Sports that gives direct access to your hometown teams without the need for a TV, cable or satellite subscription.</P>
+                            <hr>
+                            <h3>Supported Device</h3>
+                             Currently you have the option to watch Bally Sports+ content on Samsung TV, Roku, Amazon Fire TV, Android TV, Apple TV, Xbox One, Xbox Series X/S, mobile and tablet devices (iOS, Android) and BallySports.com. We are working to add additional platforms and encourage you to check back frequently for updated information.
+                              
+                            <H3>Concurrent Stream</H3>
+                            <p>You can use up to 2 devices for concurrent streaming of Bally Sports+.
+                            </p>
+                            <hr>
+                            </div></div>
+              
+                     
+                
+                
+                            
+                                  
+
+
+
+
+
+
+
+<div class="chat-content" id="notes-content">
+    <!-- Content for "Notes" tab goes here -->
+
+
+
+    <h2>Phone Notes</h2>
+    <form id="notes-form">
+    	<b>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="phone">Phone:</label>
+        <input type="phone" id="phone" name="phone"><br><br>
+
+
+        <label for="zipcode">Zip Code:</label>
+        <input type="text" id="zipcode" name="zipcode"><br><br>
+
+        <label for="issue">Issue:</label>
+        <input type="text" id="issue" name="issue"><br><br>
+
+        <label for="subscription-type">Type of Subscription: DTC or MVPD</label>
+        <select id="subscription-type" name="subscription-type">
+            <option value="DTC">DTC</option>
+            <option value="MVPD">MVPD</option>
+        </select><br><br>
+
+        <label for="device">Device:</label>
+        <input type="text" id="device" name="device"><br><br>
+
+        <label for="team">Team:</label>
+        <input type="text" id="team" name="team"><br><br>
+
+        <label for="steps-taken">Steps taken / Summary:</label><br>
+        <textarea id="steps-taken" name="steps-taken" rows="4" cols="50"></textarea><br><br>
+        </b>
+        <label><b>TS Provided:</b></label><br>
+        <input type="checkbox" id="ts-provided-1" name="ts-provided" value="Sign out/in">Sign out/in
+        <input type="checkbox" id="ts-provided-2" name="ts-provided" value="Uninstall/Reinstall"> Uninstall/Reinstall
+        <input type="checkbox" id="ts-provided-3" name="ts-provided" value="Clear Cache"> Clear Cache
+        <input type="checkbox" id="ts-provided-4" name="ts-provided" value="Update App"> Update App
+        <input type="checkbox" id="ts-provided-5" name="ts-provided" value="Power cycle/Turn off device"> Power cycle/Turn off device
+        <input type="checkbox" id="ts-provided-6" name="ts-provided" value="Speed Test"> Speed Test<br><br>
+        <b>
+        <label for="outcome">Outcome:</label><br>
+        <select id="outcome" name="outcome">
+            <option value="Solved">Solved</option>
+            <option value="Pending">Pending</option>
+            <option value="Onhold">Onhold</option>
+        </select><br><br>
+        </b>
+        
+
+        <button type="button" id="save-button">Save and Print to Notes</button>
+    </form>
+</div>
+
+
+<script>
+    // JavaScript to handle adding notes
+    const addNoteButton = document.getElementById('add-note-button');
+    const noteTypeRadios = document.querySelectorAll('input[name="note-type"]');
+    const noteTextArea = document.getElementById('note-text');
+    const addedNotesContainer = document.getElementById('added-notes');
+
+    addNoteButton.addEventListener('click', () => {
+        // Get the selected note type
+        let selectedNoteType = '';
+        noteTypeRadios.forEach((radio) => {
+            if (radio.checked) {
+                selectedNoteType = radio.value;
+            }
+        });
+
+        // Get the note text
+        const noteText = noteTextArea.value;
+
+        // Create a new note element
+        const noteElement = document.createElement('div');
+        noteElement.classList.add('note');
+        noteElement.textContent = `[${selectedNoteType.toUpperCase()}] ${noteText}`;
+
+        // Append the note to the container
+        addedNotesContainer.appendChild(noteElement);
+
+        // Clear the radio selection and note text
+        noteTypeRadios.forEach((radio) => {
+            radio.checked = false;
+        });
+        noteTextArea.value = '';
+    });
+</script>
+
+
+
+    <script>
+        // JavaScript to handle tab switching
+        const tabs = document.querySelectorAll('.tab');
+        const subTabs = document.querySelector('#sub-tabs');
+        const chatFlowContent = document.querySelector('#chat-flow-content');
+        const billingContent = document.querySelector('#billing-content');
+        const techContent = document.querySelector('#tech-content');
+        const spielContent = document.querySelector('#spiel-content');
+        const probingContent = document.querySelector('#probing-content');
+        const ballysportContent = document.querySelector('#ballysport-content');
+        const notesContent = document.querySelector('#notes-content');
+
+        tabs.forEach((tab) => {
+            tab.addEventListener('click', () => {
+                tabs.forEach((t) => {
+                    t.classList.remove('active-tab');
+                });
+                tab.classList.add('active-tab');
+
+                // Show/hide content based on the clicked tab
+                chatFlowContent.style.display = 'none';
+                billingContent.style.display = 'none';
+                techContent.style.display = 'none';
+                spielContent.style.display = 'none';
+                probingContent.style.display = 'none';
+                ballysportContent.style.display = 'none';
+                notesContent.style.display = 'none';
+
+                if (tab.id === 'tab1') {
+                    chatFlowContent.style.display = 'block';
+                } else if (tab.id === 'tab4') {
+                    billingContent.style.display = 'block';
+                } else if (tab.id === 'tab5') {
+                    techContent.style.display = 'block';
+                } else if (tab.id === 'tab2') {
+                    spielContent.style.display = 'block';
+                } else if (tab.id === 'tab3') {
+                    probingContent.style.display = 'block';
+                } else if (tab.id === 'tab6') {
+                    ballysportContent.style.display = 'block';
+                } else if (tab.id === 'tab7') {
+                    notesContent.style.display = 'block';
+                }
+            });
+        });
+
+  </script>
+ <script>
+        // JavaScript to handle tab switching
+        // ... (Existing tab-switching code) ...
+
+        // JavaScript to handle functional buttons in the "Tech" tab
+        const techButtons = document.querySelectorAll('.functional-button');
+        const techSections = document.querySelectorAll('.content-section');
+
+        techButtons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                techSections.forEach((section) => {
+                    section.style.display = 'none';
+                });
+                techSections[index].style.display = 'block';
+            });
+        });
+    </script>
+<script>
+    document.getElementById('save-button').addEventListener('click', function() {
+        // Get form values
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const zipcode = document.getElementById('zipcode').value;
+        const issue = document.getElementById('issue').value;
+        const subscriptionType = document.getElementById('subscription-type').value;
+        const device = document.getElementById('device').value;
+        const team = document.getElementById('team').value;
+        const stepsTaken = document.getElementById('steps-taken').value;
+        const outcome = document.getElementById('outcome').value;
+
+        // Get selected TS Provided checkboxes
+        const tsProvidedCheckboxes = document.querySelectorAll('input[name="ts-provided"]:checked');
+        const tsProvidedValues = Array.from(tsProvidedCheckboxes).map(cb => cb.value);
+
+        // Create a formatted note with line breaks
+        const formattedNote = `
+        Name: ${name}<br>
+        Email: ${email}<br>
+        phone: ${phone}<br>
+        Zip Code: ${zipcode}<br>
+        Issue: ${issue}<br>
+        Type of Subscription: ${subscriptionType}<br>
+        Device: ${device}<br>
+        Team: ${team}<br>
+        Steps taken / Summary:<br>
+        ${stepsTaken}<br>
+        TS Provided:<br><ul>
+        ${tsProvidedValues.join('<br>') || ''}<br>
+        Outcome: ${outcome}<br>
+        `;
+
+        // Create a new paragraph element for the note
+        const noteParagraph = document.createElement('p');
+        noteParagraph.innerHTML = formattedNote;
+
+        // Append the note to the Notes tab
+        const notesContent = document.getElementById('notes-content');
+        notesContent.appendChild(noteParagraph);
+
+        // Reset the form
+        document.getElementById('notes-form').reset();
+    });
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
